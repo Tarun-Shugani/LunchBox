@@ -1,0 +1,16 @@
+{
+  "name": "lunchbox",
+  "version": "1.0.0",
+  "description": "This is a food delivery web app where college students and working professionls can order home made food.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "sanket,tosh",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^2.6.2",
+    "express": "^4.17.1"
+  }
+}
