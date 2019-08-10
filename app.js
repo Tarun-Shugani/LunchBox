@@ -4,7 +4,8 @@ const express = require("express"),
     
 
 // //routing
-const indexRoutes = require("./routes/index.js");
+const indexRoutes = require("./routes/index.js"),
+      authRoutes = require("./routes/auth");
 
 // //connection
 app.set("view engine", "ejs")
@@ -13,13 +14,14 @@ app.use(express.static(__dirname + "/public"));
 
 //use route
 app.use(indexRoutes);
+app.use(authRoutes);
 
 //listining to port 3000
 app.listen("3000", () =>{
   console.log("Ready to deliver!")
 });
 
-//to start the server write node app.js on your terminal and write http://localhost:3000/ on your browser
+//to start the server write npm start on your terminal and write http://localhost:3000/ on your browser
 //and to stop the server ctrl+c
 
 
