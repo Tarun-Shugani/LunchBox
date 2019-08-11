@@ -1,7 +1,13 @@
 const express = require("express"),
      app=express(),
+     mongoose = require("mongoose"),
+     keys = require("./config/keys"),
      bodyParser=require("body-parser");
     
+//Db connection
+mongoose.connect(keys.mongodb.dbURI, () =>{
+  console.log("Database connected");
+});     
 
 // //routing
 const indexRoutes = require("./routes/index.js"),
