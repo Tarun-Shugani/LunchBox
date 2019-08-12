@@ -2,6 +2,9 @@ exports.getIndex = (req, res,next) => {
     res.render('home')
 };
 
+exports.getListMenu = (req,res,next) =>{
+//   menu list 
+};
 
 
 
