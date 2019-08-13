@@ -1,13 +1,8 @@
-const express = require("express"),
-     app=express(),
-     mongoose = require("mongoose"),
-     keys = require("./config/keys"),
-     bodyParser=require("body-parser");
-    
-//Db connection
-mongoose.connect(keys.mongodb.dbURI, () =>{
-  console.log("Database connected");
-});     
+const express = require("express")
+require('./db/mongoose'),
+bodyParser=require("body-parser")
+
+const app=express()   
 
 // //routing
 const indexRoutes = require("./routes/index.js"),
@@ -23,8 +18,8 @@ app.use(indexRoutes);
 app.use(authRoutes);
 
 //listining to port 3000
-app.listen("3000", () =>{
-  console.log("Ready to deliver!")
+app.listen('3000', () =>{
+  console.log("Server is up on port 3000")
 });
 
 //to start the server write npm start on your terminal and write http://localhost:3000/ on your browser
