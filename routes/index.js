@@ -6,7 +6,10 @@ const express = require("express"),
 //for this route main logic will go to tiffincontroller-->controllers/tiffin  
 router.get('/', tiffinController.getIndex);
 
-router.get('/menu-list', tiffinController.getListMenu);
+router.get('/list', tiffinController.getList);
 
+router.get('/foodorder', tiffinController.getFoodOrder);
+
+router.get('/contact-us', tiffinController.getContactUs);
 
 module.exports=router;

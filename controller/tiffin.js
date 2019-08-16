@@ -1,9 +1,20 @@
 exports.getIndex = (req, res,next) => {
-    res.render('home')
+    res.render('index')
 };
 
-exports.getListMenu = (req,res,next) =>{
+exports.getList = (req,res,next) =>{
 //   menu list 
+res.render('foodprovider')
+};
+
+exports.getFoodOrder = (req,res,next) =>{
+    //   menu list 
+    res.render('foodorder')
+};
+
+exports.getContactUs = (req,res,next) =>{
+    //   menu list 
+    res.render('Contact-us')
 };
 
 

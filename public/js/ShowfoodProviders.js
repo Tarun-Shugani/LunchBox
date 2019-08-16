@@ -1,8 +1,3 @@
-
-
-
-
-
 document.addEventListener('DOMContentLoaded', function(){
     let stars = document.querySelectorAll('.star');
     stars.forEach(function(star){
@@ -37,9 +32,6 @@ function setRating(ev){
 document.querySelector(".btn-order-now").onclick =function(){
     window.open ('OrderdetailsPage.html','_self',true);
 }
-
-
-
 
 // end of rating bar
 

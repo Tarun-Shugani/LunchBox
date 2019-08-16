@@ -1,5 +1,5 @@
 const express = require("express")
-require('./db/mongoose'),
+// require('./db/mongoose'),
 bodyParser=require("body-parser")
 
 const app=express()   
@@ -11,7 +11,7 @@ const indexRoutes = require("./routes/index.js"),
 // //connection
 app.set("view engine", "ejs")
 app.use(bodyParser.urlencoded({extended: true}));
-app.use(express.static(__dirname + "/public"));
+app.use(express.static("/public"));
 
 //use route
 app.use(indexRoutes);
