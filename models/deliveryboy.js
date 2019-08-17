@@ -1,7 +1,7 @@
 const mongoose = require("mongoose")
 const validator = require('validator')
 
-const deliveryboySchema = new mongoose.Schema({
+const DeliveryBoy = mongoose.model('DeliveryBoy', {
     name: {
         type: String,
         required: true,
@@ -59,7 +59,7 @@ const deliveryboySchema = new mongoose.Schema({
     
 })
 
-const DeliveryBoy = mongoose.model('DeliveryBoy', deliveryboySchema)
+//const DeliveryBoy = mongoose.model('DeliveryBoy', deliveryboySchema)
 
 module.exports = DeliveryBoy
 

@@ -2,12 +2,15 @@ const express = require("express")
 require('./db/mongoose'),
 bodyParser=require("body-parser")
 
-const app=express()   
+const app = express()
+app.use(express.json())
 
 // //routing
 const indexRoutes = require("./routes/index.js"),
-      authRoutes = require("./routes/auth");
-
+      authRoutes = require("./routes/auth"),
+      auntyRouter = require("./routes/aunty"),
+      bhukkadRouter = require('./routes/bhukkad'),
+      deliveryboyRouter = require('./routes/deliveryboy')  
 // //connection
 app.set("view engine", "ejs")
 app.use(bodyParser.urlencoded({extended: true}));
@@ -16,6 +19,9 @@ app.use(express.static(__dirname + "/public"));
 //use route
 app.use(indexRoutes);
 app.use(authRoutes);
+app.use(auntyRouter);
+app.use(bhukkadRouter);
+app.use(deliveryboyRouter);
 
 //listining to port 3000
 app.listen('3000', () =>{

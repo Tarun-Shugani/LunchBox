@@ -1,7 +1,7 @@
 const mongoose = require("mongoose")
 const validator = require("validator")
 
-const auntySchema = new mongoose.Schema({
+const Aunty = mongoose.model('Aunty', {
     name: {
         type: String,
         required: true,
@@ -41,7 +41,7 @@ const auntySchema = new mongoose.Schema({
         }
     },
     mobileNumber: {
-        type: String,
+        type: Number,
         required: true,
         trim: true,
         validate(value){
@@ -52,7 +52,7 @@ const auntySchema = new mongoose.Schema({
     },
     idproof:{
         type: String,
-        required: true,
+       // required: true,
         trim: true,
         validate(value) {
             if(!validator.isIdentityCard(value)){
@@ -70,5 +70,6 @@ const auntySchema = new mongoose.Schema({
         trim: true
         }
 })
-const Aunty = mongoose.model('Aunty', auntySchema)
+
+//const Aunty = mongoose.model('Aunty', auntySchema)
 module.exports = Aunty
