@@ -1,7 +1,7 @@
 const mongoose = require("mongoose")
 const validator = require('validator')
 
-const bhukkadSchema = new mongoose.Schema({
+const Bhukkad = mongoose.model('Bhukkad', {
     name: {
         type: String,
         required: true,
@@ -46,5 +46,5 @@ const bhukkadSchema = new mongoose.Schema({
     }
 })
 
-const Bhukkad = mongoose.model('Bhukkad', bhukkadSchema)
+//const Bhukkad = mongoose.model('Bhukkad', bhukkadSchema)
 module.exports = Bhukkad
