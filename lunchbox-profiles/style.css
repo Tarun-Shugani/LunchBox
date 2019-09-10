@@ -1,0 +1,377 @@
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans:400,700");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans", sans-serif;
+}
+
+*::-moz-selection {
+  background: rgba(0, 0, 0, 0.2);
+  color: #fff;
+}
+
+*::selection {
+  background: rgba(0, 0, 0, 0.2);
+  color: #fff;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  overflow: hidden;
+  display: flex;
+  transition: padding 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+a {
+  text-decoration: none;
+  color: #ef3340;
+}
+
+header {
+  z-index: 5;
+  opacity: 1;
+  transition: opacity 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+header .nav {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 80px;
+}
+header .nav .title {
+  line-height: 80px;
+  padding: 0 120px;
+  font-size: 24px;
+  color: #fff;
+  font-weight: 900;
+}
+header .nav .toggle {
+  position: absolute;
+  margin: auto;
+  width: 46px;
+  height: 46px;
+  right: 120px;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  cursor: pointer;
+}
+header .nav .toggle .bar {
+  position: relative;
+  width: 40px;
+  height: 2px;
+  background: #fff;
+}
+header .nav .toggle .bar:before, header .nav .toggle .bar:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  left: 0;
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+  transition: top 0.25s ease, bottom 0.25s ease, -webkit-transform 0.25s ease;
+  transition: transform 0.25s ease, top 0.25s ease, bottom 0.25s ease;
+  transition: transform 0.25s ease, top 0.25s ease, bottom 0.25s ease, -webkit-transform 0.25s ease;
+}
+header .nav .toggle .bar:before {
+  top: -10px;
+}
+header .nav .toggle .bar:after {
+  bottom: -10px;
+}
+header .nav .toggle.clicked .bar {
+  background: transparent;
+}
+header .nav .toggle.clicked .bar:before, header .nav .toggle.clicked .bar:after {
+  background: #000;
+}
+header .nav .toggle.clicked .bar:before {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  top: 0;
+}
+header .nav .toggle.clicked .bar:after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  bottom: 0;
+}
+header .nav nav {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  opacity: 1;
+  z-index: 5;
+ 
+}
+header .nav nav .showcase {
+  background: url("pizza1.jpg");
+background-size:cover;
+  flex: 1;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header .nav nav .showcase .showcase-container {
+  width: 70%;
+height:80%;
+  position: relative;
+  overflow: hidden;
+}
+header .nav nav .showcase .showcase-container:before {
+  content: "";
+  display: block;
+  padding-top: 100%;
+}
+header .nav nav .showcase .showcase-menu {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: visible;
+  list-style-type: none;
+  transition: top 0.25s ease;
+}
+header .nav nav .showcase .showcase-menu .quote
+{
+font-family:cursive;
+font-size:15px;
+color:#CFCBCA ;
+
+}
+header .nav nav .showcase .showcase-menu li {
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  text-transform: uppercase;
+  text-align: center;
+  overflow: auto;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1;
+background: rgba(0,0,0,0.7);
+padding:40px;
+}
+header .nav nav .showcase .showcase-menu .form-area{
+ justify-content: center;
+  align-items: center;
+ text-align: center;
+  background-position: center center;
+  background-repeat: no-repeat;
+position:relative;
+left:12%;
+transform:(-50%,-50%);
+width:500px;
+height:600px;
+box-sizing:border-box;
+padding:40px;
+color:#FFFFFF;
+}
+header .nav nav .showcase .showcase-menu .form-area .form-table,td
+{
+color:#FFFFFF;
+align:center;
+  font-size: 20px;
+text-transform: none;
+ 
+  background-position: center center;
+  background-repeat: no-repeat;
+
+cellspacing:5px;
+padding:5px;
+}
+header .nav nav .showcase .showcase-menu .form-wallet{
+ justify-content: center;
+  align-items: center;
+ text-align: center;
+  background-position: center center;
+  background-repeat: no-repeat;
+position:relative;
+
+transform:(-50%,-50%);
+box-sizing:border-box;
+padding:40px;
+color:#FFFFFF;
+}
+header .nav nav .showcase .showcase-menu .form-area .form-wallet-table,td
+{
+color:#FFFFFF;
+align:center;
+  font-size: 20px;
+text-transform: none;
+ 
+  background-position: center center;
+  background-repeat: no-repeat;
+
+cellspacing:5px;
+padding:5px;
+}
+header .nav nav .showcase .showcase-menu li.overlay:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: -1;
+}
+header .nav nav .menu {
+  background: #fff;
+  
+}
+header .nav nav .menu ul {
+  width: 100%;
+  padding: 70px 40px 20px 40px;
+  list-style-type: none;
+  max-height: 100%;
+  overflow-y: auto;
+}
+header .nav nav .menu ul::-webkit-scrollbar {
+  width: 6px;
+  height: 10px;
+}
+header .nav nav .menu ul::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+}
+header .nav nav .menu ul::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.4);
+  border: 0px none #ffffff;
+  border-radius: 3px;
+}
+header .nav nav .menu ul::-webkit-scrollbar-thumb:hover {
+  background: #000;
+}
+header .nav nav .menu ul::-webkit-scrollbar-thumb:active {
+  background: #000;
+}
+header .nav nav .menu ul::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+  border: 0px none #ffffff;
+  border-radius: 0;
+}
+header .nav nav .menu ul::-webkit-scrollbar-track:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+header .nav nav .menu ul::-webkit-scrollbar-track:active {
+  background: rgba(0, 0, 0, 0.1);
+}
+header .nav nav .menu ul::-webkit-scrollbar-corner {
+  background: transparent;
+}
+header .nav nav .menu ul li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+header .nav nav .menu ul li .number {
+  display: inline-block;
+  padding: 0 0 0 80px;
+  overflow: hidden;
+}
+header .nav nav .menu ul li .number span {
+  display: block;
+  font-size: 48px;
+  font-weight: 400;
+  transition: -webkit-transform 0.25s ease;
+  transition: transform 0.25s ease;
+  transition: transform 0.25s ease, -webkit-transform 0.25s ease;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+}
+header .nav nav .menu ul li a {
+  display: inline-block;
+  font-size: 48px;
+  color: #000;
+  line-height: 1;
+  padding: 24px 0 24px 80px;
+  transition: -webkit-transform 0.25s ease;
+  transition: transform 0.25s ease;
+  transition: transform 0.25s ease, -webkit-transform 0.25s ease;
+}
+header .nav nav .menu ul li:hover a {
+  -webkit-transform: translateX(20px);
+          transform: translateX(20px);
+}
+header .nav nav .menu ul li.hover .number span {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+header .nav nav.hidden {
+  display: none;
+}
+header .nav nav.open {
+  opacity: 1;
+}
+header .nav nav.open .showcase {
+  -webkit-animation: slideInLeft 0.5s cubic-bezier(0.3, 0, 0.3, 1) forwards;
+          animation: slideInLeft 0.5s cubic-bezier(0.3, 0, 0.3, 1) forwards;
+}
+header .nav nav.open .menu {
+  -webkit-animation: slideInRight 0.5s cubic-bezier(0.3, 0, 0.3, 1) forwards;
+          animation: slideInRight 0.5s cubic-bezier(0.3, 0, 0.3, 1) forwards;
+}
+
+@-webkit-keyframes slideInRight {
+  from {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+@-webkit-keyframes slideInLeft {
+  from {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+@keyframes slideInLeft {
+  from {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+

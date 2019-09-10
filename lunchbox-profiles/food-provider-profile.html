@@ -1,0 +1,201 @@
+<html>
+<head><title>profile page</title>
+<style>
+.tdata,select, input[type=date], input[type=time],input[type=checkbox]{
+background-color:transparent;
+border:none; border-bottom: 0.5px solid #CFCBCA;
+outline:none;
+height:15px
+text-align:center;
+width:100%;
+}
+::placeholder,select, input[type=date], input[type=time],input[type=checkbox]
+{color:#979392 ;}
+input[type=text],input[type=password]
+{color:#ffffff ;}
+input[type=submit],button
+{width:100%;
+border:none;
+outline:none;
+color:#ffffff;
+height:40px;
+background-color:tomato;
+cursor:pointer;
+border-radius:20px;}
+
+.form-table{
+
+}
+.form-area{
+
+}
+</style>
+<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+<body>
+<header>
+	<div class="nav">
+		<div class="title">
+			Navigation
+		</div>
+		<div class="toggle">
+			<div class="bar"></div>
+		</div>
+		
+		<nav class="">
+			<div class="showcase">
+				<div class="showcase-container">
+					<ul class="showcase-menu">
+						<li><p><img src="user.jpg" style="border-radius:50%; height:200px; width:200px; opacity:0.9; alt="user"><br>Hi! USER</p><p class="quote">"you love food and we know it"</p></li>
+						<li>you have new orders to prepare!</li>
+						<li>orders you have provided</li>
+						<li class="overlay" >
+							your ratings
+						</li>
+						<li><form class="form-area" style="height:600px; width:400; ">
+   <table class="form-table" >
+<tr><td colspan=2 align="center"><img src="user.jpg" style="border-radius:50%; height:100px; width:100px; opacity:0.9; alt="user"></td>
+    </tr>
+<tr><td> <label for="del-fname">First Name</label></td>
+    <td ><input type="text" id="del-fname" name="del-firstname" placeholder="Your name.." class="tdata"></td></tr>
+
+    <tr><td><label for="del-lname">Last Name</label></td>
+    <td><input type="text" id="del-lname" name="del-lastname" placeholder="Your last name.." class="tdata"></td></tr>
+
+    <tr><td><label for="del-state">State</label></td>
+    <td><select id="del-state" name="state" >
+      <option value="madhya pradesh" >madhya pradesh</option>
+      <option value="uttar pradesh" >uttar pradesh</option>
+      <option value="goa" >goa</option>
+    </select></td></tr>
+
+   <tr><td> <label for="del-city"> City</label></td>
+    <td><input type="text" id="del-city" name="del-city" placeholder="City" class="tdata"></td></tr>
+ <tr><td> <label for="del-pincode"> Pincode:</label></td>
+    <td><input type="text" id="del-pincode" name="del-pcode" placeholder="Pincode" class="tdata"></td></tr>
+<tr><td> <label for="del-house_no"> House No.</label></td>
+    <td><input type="text" id="del-house_no" name="del-Hno" placeholder="House no." class="tdata"></td></tr>
+<tr><td> <label for="del-street"> Street</label></td>
+    <td><input type="text" id="del-street" name="del-str" placeholder="Street" class="tdata"></td></tr>
+
+<tr><td> <label for="del-Area"> Area</label></td>
+    <td><textarea type="text" id="del-Area" name="del-Ar" placeholder="Area" style="height:30px;" class="tdata"></textarea></td></tr>
+<tr><td> <label for="del-password"> Password</label></td>
+<td><input type="password" id="del-password" name="del-pass"  class="tdata"></td></tr>
+<tr><td> <label for="del-repassword"> Confirm Password</label></td>
+<td><input type="password" id="del-repassword" name="del-repass"  class="tdata"></td></tr>
+<tr> <td colspan="2" align="center"><input type="submit" value="Submit"></td></tr></table>
+  </form></li>
+						
+						<li >link your bank account here <br>
+ <form class="form-wallet">
+   <table class="form-wallet-table"><tr><td> <label for="del-userphone">Mobile no.</label></td>
+    <td ><input type="text" id="del-userphone" name="del-mobileno." placeholder="enter you no." class="tdata"></td></tr>
+<tr><td><label for="bank">Bank</label></td>
+    <td ><select id="bank" name="del-wallet" >
+      <option value="sbi" >sbi</option>
+      <option value="pnb" >pnb</option>
+      <option value="icici" >icici</option>
+    </select></td></tr>
+<tr><td> <label for="del-account">Account no.</label></td>
+    <td ><input type="text" id="del-account" name="del-acc." placeholder="enter you Acc/no." class="tdata"></td></tr>
+<tr><td colspan="2" align="center"><input type="Submit" value="link account"></td></tr></table></form></li>
+						<li> license details<br>
+<form class="form-wallet">
+   <table class="form-wallet-table">
+<tr><td> <label for="fp-license">License no.</label></td>
+    <td ><input type="text" id="fp-license" name="fp-fl" placeholder="enter your fssai license no." class="tdata"></td></tr>
+<tr><td> <label for="fp-from">valid from</label></td>
+    <td ><input type="date" id="fp-from" name="fpfrom" placeholder="" class="tdata"></td></tr>
+<tr><td> <label for="fp-to">valid from</label></td>
+    <td ><input type="date" id="fp-to" name="fpto" placeholder="" class="tdata"></td></tr>
+<tr><td colspan="2" align="center"><input type="submit" value="Submit"></td></tr>
+<tr><td colspan="2" align="center">OR</td></tr>
+<tr><td colspan="2" align="center"><input type="submit" value="Apply for License"></td></tr>
+</table></form>
+                                                          
+
+
+</li>
+<li> order settings<br>
+<form class="form-wallet">
+   <table class="form-wallet-table">
+<tr><td colspan="2" align="center"> <label for="fp-order-avail">AVAILABILITY</label></td></tr>
+    <tr><td >Lunch</td><td><input type="checkbox" id="fp-order-avail" name="fp-avail-lunch" value="lunch"class="tdata"></td></tr>
+<tr><td>Dinner</td><td><input type="checkbox" id="fp-order-avail" name="fp-avail-dinner" value="dinner"class="tdata"></td></tr>
+<tr><td><label for="ordercount">Total Orders</label></td>
+    <td ><select id="ordercount" name="fp-order-count" >
+      <option value="5" >5</option>
+      <option value="10" >10</option>
+      <option value="15" >15</option>
+      <option value="20" >20</option>
+      <option value="30" >30</option>
+      <option value="30+" >greater than30</option>
+    </select></td></tr>
+<tr><td><label for="dayfrom">Day from</label></td>
+    <td ><select id="dayfrom" name="fpdayfrom" >
+      <option value="mon" >Monday</option>
+      <option value="tues" >Tuesday</option>
+      <option value="wed" >Wednesday</option>
+      <option value="thurs" >Thursday</option>
+      <option value="fri" >Friday</option>
+      <option value="sat" >Saturday</option>
+       <option value="sun" >Sunday</option>
+    </select></td></tr>
+<tr><td><label for="dayto">Day to</label></td>
+    <td ><select id="dayto" name="fpdayto" >
+      <option value="mon" >Monday</option>
+      <option value="tues" >Tuesday</option>
+      <option value="wed" >Wednesday</option>
+      <option value="thurs" >Thursday</option>
+      <option value="fri" >Friday</option>
+      <option value="sat" >Saturday</option>
+       <option value="sun" >Sunday</option>
+    </select></td></tr>
+<tr><td> <label for="fp-lunch-time">Lunch Order before</label></td>
+    <td ><input type="time" id="fp-lunch-time" name="fplunchtime"  class="tdata"></td></tr>
+<tr><td> <label for="fp-dinner-time">Dinner Order before</label></td>
+    <td ><input type="time" id="fp-dinner-time" name="fpdinnertime"  class="tdata"></td></tr>
+<tr><td colspan="2" align="center"><input type="submit" value="Save"></td></tr>
+<tr><td colspan="2" align="center">AND</td></tr>
+<tr><td colspan="2" align="center"> <input type="submit" value="Update Menu" onclick="window.location.href = 'form.html';"></td></tr>
+</table></form>
+                                                          
+
+
+</li>
+
+                                                                                                 <li>share our app with your friends</li>
+					</ul>
+				</div>
+			</div>
+			
+			<div class="menu">
+				<ul class="main-menu">
+					<li class="active"><a href="#!">My Profile</a></li>
+                                                                                  <li><a href="#!">New Order</a></li>
+					<li><a href="#!">History</a></li>
+					<li><a href="#!">My Ratings</a></li>
+					<li><a href="#!">Update profile</a></li>
+					<li><a href="#!">Link Bank account</a></li>
+				                <li><a href="#!">Food License</a></li>
+                                                                                <li><a href="#!">Order Settings</a></li>
+                                                                                 <li><a href="#!">Share</a></li>
+                                                                                     <li><a href="form.html">Update menu</a></li>
+					<li><a href="#!">Sign Out</a></li>
+				</ul>
+			</div>
+		</nav>
+		
+	</div>
+</header>
+
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="profile.js"></script></body>
+</html>

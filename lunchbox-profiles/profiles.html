@@ -1,0 +1,132 @@
+<html>
+<head><title>profile page</title>
+<style>
+.tdata,select{
+background-color:transparent;
+border:none; border-bottom: 0.5px solid #CFCBCA;
+outline:none;
+height:15px
+text-align:center;
+width:100%;
+}
+::placeholder,select
+{color:#979392 ;}
+input[type=text],input[type=password]
+{color:#ffffff ;}
+input[type=submit]
+{width:100%;
+border:none;
+outline:none;
+color:#ffffff;
+height:40px;
+background-color:tomato;
+cursor:pointer;
+border-radius:20px;}
+
+.form-table{
+
+}
+.form-area{
+
+}
+</style>
+<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+<body>
+<header>
+	<div class="nav">
+		<div class="title">
+			Navigation
+		</div>
+		<div class="toggle">
+			<div class="bar"></div>
+		</div>
+		
+		<nav class="">
+			<div class="showcase">
+				<div class="showcase-container">
+					<ul class="showcase-menu">
+						<li><p><img src="user.jpg" style="border-radius:50%; height:200px; width:200px; opacity:0.9; alt="user"><br>Hi! USER</p><p class="quote">"you love food and we know it"</p></li>
+						<li>Hover over the list items or click them!</li>
+						<li><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/124740/ice-final-white.svg" alt=""></li>
+						<li class="overlay" >
+							Lorem ipsum
+						</li>
+						<li><form class="form-area" style="height:600px; width:400; ">
+   <table class="form-table" >
+<tr><td colspan=2 align="center"><img src="user.jpg" style="border-radius:50%; height:100px; width:100px; opacity:0.9; alt="user"></td>
+    </tr>
+<tr><td> <label for="fname">First Name</label></td>
+    <td ><input type="text" id="fname" name="firstname" placeholder="Your name.." class="tdata"></td></tr>
+
+    <tr><td><label for="lname">Last Name</label></td>
+    <td><input type="text" id="lname" name="lastname" placeholder="Your last name.." class="tdata"></td></tr>
+
+    <tr><td><label for="state">State</label></td>
+    <td><select id="state" name="state" >
+      <option value="madhya pradesh" >madhya pradesh</option>
+      <option value="uttar pradesh" >uttar pradesh</option>
+      <option value="goa" >goa</option>
+    </select></td></tr>
+
+   <tr><td> <label for="city"> City</label></td>
+    <td><input type="text" id="city" name="" placeholder="City" class="tdata"></td></tr>
+ <tr><td> <label for="pincode"> Pincode:</label></td>
+    <td><input type="text" id="pincode" name="pcode" placeholder="Pincode" class="tdata"></td></tr>
+<tr><td> <label for="house_no"> House No.</label></td>
+    <td><input type="text" id="house_no" name="Hno" placeholder="House no." class="tdata"></td></tr>
+<tr><td> <label for="street"> Street</label></td>
+    <td><input type="text" id="street" name="str" placeholder="Street" class="tdata"></td></tr>
+
+<tr><td> <label for="Area"> Area</label></td>
+    <td><textarea type="text" id="Area" name="Ar" placeholder="Area" style="height:30px;" class="tdata"></textarea></td></tr>
+<tr><td> <label for="password"> Password</label></td>
+<td><input type="password" id="password" name="pass"  class="tdata"></td></tr>
+<tr><td> <label for="repassword"> Confirm Password</label></td>
+<td><input type="password" id="repassword" name="repass"  class="tdata"></td></tr>
+<tr> <td colspan="2" align="center"><input type="submit" value="Submit"></td></tr></table>
+  </form></li>
+						
+						<li >link your wallets here <br>
+ <form class="form-wallet">
+   <table class="form-wallet-table"><tr><td> <label for="userphone">Mobile no.</label></td>
+    <td ><input type="text" id="userphone" name="mobileno." placeholder="enter you no." class="tdata"></td></tr>
+<tr><td><label for="wallet">Wallet</label></td>
+    <td ><select id="wallet" name="user-wallet" >
+      <option value="paytm" >paytm</option>
+      <option value="airtel" >airtel</option>
+      <option value="amazon" >amazon</option>
+    </select></td></tr>
+<tr><td colspan="2" align="center"><input type="submit" value="link wallet"></td></tr></table></form></li>
+						<li> you have no coupons></li>
+                                                                                                 <li>share our app with your friends</li>
+					</ul>
+				</div>
+			</div>
+			
+			<div class="menu">
+				<ul class="main-menu">
+					<li class="active"><a href="#!">My Profile</a></li>
+                                                                                  <li><a href="#!">New Order</a></li>
+					<li><a href="#!">My Orders</a></li>
+					<li><a href="#!">Favourites</a></li>
+					<li><a href="#!">Update profile</a></li>
+					<li><a href="#!">Link Wallets</a></li>
+				                <li><a href="#!">Coupons/Offers</a></li><li><a href="#!">Share</a></li>
+					<li><a href="#!">Sign Out</a></li>
+				</ul>
+			</div>
+		</nav>
+		
+	</div>
+</header>
+
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="profile.js"></script></body>
+</html>
